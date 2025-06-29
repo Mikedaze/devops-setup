@@ -63,9 +63,11 @@ sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install -y ansible
 echo "alias ans='ansible'" >> ~/.bash_aliases
 
-echo "===> Step 9: 🌍 Installing Terraform…”
+echo "===> Step 9: 🌍 Installing Terraform...”
+# echo "===> Step 9: 🌍 Installing Terraform...”
 # 10. Terraform
 curl -fsSL https://apt.releases.hashicorp.com/gpg |   sudo gpg --dearmor -o /etc/apt/keyrings/hashicorp.gpg
+
 echo "deb [signed-by=/etc/apt/keyrings/hashicorp.gpg]   https://apt.releases.hashicorp.com $(lsb_release -cs) main" |   sudo tee /etc/apt/sources.list.d/hashicorp.list
 sudo apt update && sudo apt install -y terraform
 echo "alias tf='terraform'" >> ~/.bash_aliases
@@ -86,7 +88,7 @@ echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg]   https://packages.cl
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg |   sudo apt-key add -
 sudo apt update && sudo apt install -y google-cloud-sdk
 
-echo "===> Step 13: ��️ Installing Azure CLI..."
+echo "===> Step 13: 🌤️ Installing Azure CLI..."
 # 14. Azure CLI
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
